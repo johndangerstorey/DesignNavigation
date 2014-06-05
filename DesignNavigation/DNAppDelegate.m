@@ -13,6 +13,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    id appearance = [UINavigationBar appearanceWhenContainedIn:[UIView class], nil];
+    [appearance setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Arial" size:20]}];
+// makes specific 
+    [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor orangeColor]} forState:UIControlStateNormal];
+    
+    
+    
+    
+    
+    
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[DNPlaygroundViewController new]];
